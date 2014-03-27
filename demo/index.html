@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery UHEPRNG Plugin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-12">
+  				<h1>Hash Identifier</h1>
+  				<hr />
+  				<p class="lead">This plugin allows you to idenity hashes using regular expressions.</p><p class="lead"> Not much else to it.</p>
+  			</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-12">
+  				<h2>$(this).hashIdentity(hash); Returns: Array of hash types it may be.</h2>
+  				<hr />
+  				<h3>Description</h3>
+  				<p>By passing a string of the hash to the plugin it will return a list of possible hash types it could be.<p>  				
+  				<h3>Proper Example</h3>
+  				<hr />
+  				<p>You can generate some hashes using <a target="_blank" href="http://hashfor.me">Hash for me</a></p>
+  				<hr />
+	  				<div class="row">
+		  			<div class="col-8">
+		  				<div class="form-group">
+						    <label for="range" class="col-8 control-label">Hash</label>
+						    <div class="col-12">
+						      <input type="text" class="form-control" id="hash_input" placeholder="d58e3582afa99040e27b92b13c8f2280" value="d58e3582afa99040e27b92b13c8f2280">
+						    </div>
+						</div>
+		  			</div>		  			
+		  			<div class="col-4">
+		  				<div class="form-group">
+						    <label for="range" class="col-4 control-label">&nbsp;</label>
+						    <div class="col-12">
+						      <button id="generate" class="btn btn-default">Submit</button>
+						    </div>
+						</div>
+		  			</div>
+					</div>
+					<hr />
+		  			<p class="clearfix" id="output"></p>
+  		
+  			</div>
+  		</div>
+  		  	</div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+    <script src="../lib/hashes.js"></script>
+	<script src="../lib/jquery.hashIdentity.js"></script>
+   
+	<script> 
+
+	$("#generate").click(function () {	
+		        var listOfHashes =  $(this).hashIdentity($('#hash_input').val());
+
+		        if(listOfHashes.length == 0)
+		        {
+		        	$("#output").append("No Hashes Match....");
+		        }
+		        else {
+		        	//just clear the html first...
+		        	$("#output").html("<h3>What the hash might be...</h3><hr />");
+
+					for (var name in listOfHashes) {
+		        		$("#output").append("<p>" + listOfHashes[name] + "</p>");
+		        	}
+
+		        	
+		        }
+		        
+	});
+	</script>
+    
+  </body>
+</html>

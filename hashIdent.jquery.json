@@ -1,0 +1,35 @@
+{
+    "name": "hashIdentity",
+    "title": "jQuery Hash Identity",
+    "description": "jQuery plugin for identifying the type of hash you have.",
+    "keywords": [
+        "encryption",
+        "hash",
+        "identification"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Ryan McDonough",
+        "url": "http://ryanmcdonough.co.uk"
+    },
+    "maintainers": [
+        {
+            "name": "Ryan McDonough",
+            "email": "me@ryanmcdonough.co.uk",
+            "url": "http://ryanmcdonough.co.uk"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "CC0",
+            "url": "http://creativecommons.org/publicdomain/zero/1.0/"
+        }
+    ],
+    "bugs": "https://github.com/ryanmcdonough/jQuery.hashIdentity/issues",
+    "homepage": "https://github.com/ryanmcdonough/jQuery.hashIdentity",
+    "docs": "https://github.com/ryanmcdonough/jQuery.hashIdentity",
+    "download": "https://github.com/ryanmcdonough/jQuery.hashIdentity/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
