@@ -4,7 +4,7 @@ jQuery.hashIdentity
 Identify hashes using javascript.
 --------
 
-This plugin allows you to idenity hashes using regular expressions.
+This plugin allows you to identify hashes using regular expressions.
 
 ---
 
